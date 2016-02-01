@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">risticpe-FuelTrack</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_log_edit">LogEditActivity</string>
+    <string name="edittext_station">Station Name</string>
+    <string name="edittext_grade">Fuel Grade</string>
+    <string name="edittext_odo">Odometer Readout</string>
+    <string name="edittext_litres">Litres</string>
+    <string name="edittext_cents_per_litre">Cents Per Litre</string>
+    <string name="save_button">save</string>
+    <string name="cancel_button">cancel</string>
+    <string name="delete_button">delete</string>
+    <string name="title_activity_log_entry_view">LogEntryViewActivity</string>
+</resources>

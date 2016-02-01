@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center|bottom"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".NewLogEntryActivity"
+    android:background="#00BFFF">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/scroll_shell">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/edit_fields_shell">
+
+    <LinearLayout
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/datepicker_shell"
+        android:background="@drawable/grey_rounded_border">
+
+    <DatePicker
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/datePicker"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/station_and_grade_container"
+        android:layout_below="@+id/datepicker_shell">
+        <EditText
+            android:layout_marginRight="3dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:id="@+id/station_name"
+            android:hint="@string/edittext_station"
+            android:singleLine="true"
+            android:nextFocusDown="@+id/fuel_grade"
+            android:nextFocusForward="@+id/fuel_grade"
+            android:nextFocusLeft="@+id/fuel_grade"
+            android:nextFocusRight="@+id/fuel_grade"
+            android:nextFocusUp="@+id/fuel_grade"
+            android:background="@drawable/grey_rounded_border"/>
+
+        <EditText
+            android:layout_marginLeft="3dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:id="@+id/fuel_grade"
+            android:hint="@string/edittext_grade"
+            android:singleLine="true"
+            android:nextFocusDown="@+id/odo_edit_left"
+            android:nextFocusForward="@+id/odo_edit_left"
+            android:nextFocusLeft="@+id/odo_edit_left"
+            android:nextFocusRight="@+id/odo_edit_left"
+            android:nextFocusUp="@+id/odo_edit_left"
+            android:background="@drawable/grey_rounded_border"/>
+        </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/odo_container"
+        android:layout_below="@+id/station_and_grade_container"
+        android:background="@drawable/grey_rounded_border">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Odometer Reading"
+            android:id="@+id/odo_prompt"/>
+
+        <EditText
+            android:layout_weight="0.5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="0"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/odo_edit_left"
+            android:textAlignment="center"
+            android:nextFocusDown="@+id/odo_edit_right"
+            android:nextFocusForward="@+id/odo_edit_right"
+            android:nextFocusLeft="@+id/odo_edit_right"
+            android:nextFocusRight="@+id/odo_edit_right"
+            android:nextFocusUp="@+id/odo_edit_right"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="."
+            android:id="@+id/odo_dot"/>
+
+        <EditText
+            android:layout_weight="0.5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="0km"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/odo_edit_right"
+            android:textAlignment="center"
+            android:nextFocusDown="@+id/litres_edit_left"
+            android:nextFocusForward="@+id/litres_edit_left"
+            android:nextFocusLeft="@+id/litres_edit_left"
+            android:nextFocusRight="@+id/litres_edit_left"
+            android:nextFocusUp="@+id/litres_edit_left"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/fuel_amount_container"
+        android:layout_below="@+id/odo_container"
+        android:background="@drawable/grey_rounded_border">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Fuel Amount"
+            android:id="@+id/litres_prompt"/>
+
+        <EditText
+            android:layout_weight="0.5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="0"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/litres_edit_left"
+            android:textAlignment="center"
+            android:nextFocusDown="@+id/litres_edit_right"
+            android:nextFocusForward="@+id/litres_edit_right"
+            android:nextFocusLeft="@+id/litres_edit_right"
+            android:nextFocusRight="@+id/litres_edit_right"
+            android:nextFocusUp="@+id/litres_edit_right"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="."
+            android:id="@+id/litres_dot"/>
+
+        <EditText
+            android:layout_weight="0.5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="0L"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/litres_edit_right"
+            android:textAlignment="center"
+            android:nextFocusDown="@+id/cents_edit_left"
+            android:nextFocusForward="@+id/cents_edit_left"
+            android:nextFocusLeft="@+id/cents_edit_left"
+            android:nextFocusRight="@+id/cents_edit_left"
+            android:nextFocusUp="@+id/cents_edit_left"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/cents_per_litre_container"
+        android:layout_below="@+id/fuel_amount_container"
+        android:background="@drawable/grey_rounded_border">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="¢¢¢ per L"
+            android:id="@+id/cents_per_litre_prompt"/>
+
+        <EditText
+            android:layout_weight="0.5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="0"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/cents_edit_left"
+            android:textAlignment="center"
+            android:nextFocusDown="@+id/cents_edit_right"
+            android:nextFocusForward="@+id/cents_edit_right"
+            android:nextFocusLeft="@+id/cents_edit_right"
+            android:nextFocusRight="@+id/cents_edit_right"
+            android:nextFocusUp="@+id/cents_edit_right"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="."
+            android:id="@+id/cents_dot"/>
+
+        <EditText
+            android:layout_weight="0.5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="0¢"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/cents_edit_right"
+            android:textAlignment="center"/>
+
+    </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@+id/cents_per_litre_container"
+            android:gravity="center|bottom"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true">
+
+            <Button
+                android:layout_marginLeft="2.5dp"
+                android:layout_marginRight="2.5dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/save_button"
+                android:onClick="save"
+                android:id="@+id/save_button"
+                android:background="@drawable/btn_selector"/>
+
+            <Button
+                android:layout_marginLeft="2.5dp"
+                android:layout_marginRight="2.5dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/cancel_button"
+                android:onClick="cancel"
+                android:id="@+id/cancel_button"
+                android:background="@drawable/btn_selector"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--http://stackoverflow.com/questions/15111402/how-can-i-create-a-border-around-an-android-linearlayout-->
+<!--Credit goes to stackoverflow user Anup Cowkur-->
+
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">
+    <corners android:radius="20dp"/>
+    <padding android:left="10dp"
+             android:right="10dp"
+             android:top="10dp"
+             android:bottom="10dp"/>
+    <stroke android:color="#DDDDDD" android:width="3dp"/>
+</shape>
