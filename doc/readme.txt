@@ -10,13 +10,7 @@ Lec: B1 W16
 
 Video Demonstration URL:
 
-<URL here>
-
-********************************************************************************
-
-To retrieve project from github:
-
-<insert some shit here>
+https://www.youtube.com/watch?v=z0_WWIOeq30
 
 ********************************************************************************
 
